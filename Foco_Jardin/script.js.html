@@ -1,0 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const focos = document.querySelectorAll(".foco");
+    const encenderTodosBtn = document.getElementById("encenderTodos");
+    const apagarTodosBtn = document.getElementById("apagarTodos");
+
+    function encenderFocos() {
+        focos.forEach(foco => foco.classList.add("encendido"));
+    }
+
+    function apagarFocos() {
+        focos.forEach(foco => foco.classList.remove("encendido"));
+    }
+
+    encenderTodosBtn.addEventListener("click", encenderFocos);
+    apagarTodosBtn.addEventListener("click", apagarFocos);
+});
